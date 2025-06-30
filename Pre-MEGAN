@@ -1,0 +1,66 @@
+Running Bowtie2 
+```bash
+#!/bin/bash
+
+# Define paths
+input_dir="/mnt/e/NHCS/NHCSMS/raw_data"
+output_dir="/mnt/e/NHCS/NHCSMS/cleaned_nonhost"
+bowtie2_index="/mnt/e/NHCS/NHCSMS/bowtie2/GRCh38_noalt_as"
+threads=8
+
+mkdir -p "$output_dir"
+
+# Loop through R1 files with "_1.fq" suffix
+for r1 in "$input_dir"/*_1.fq; do
+    base=$(basename "$r1" _1.fq)
+    r2="$input_dir/${base}_2.fq"
+
+    # Skip if already processed
+    if [[ -f "$output_dir/${base}_cleaned_R1.fq" && -f "$output_dir/${base}_host_sorted.bam" ]]; then
+        echo "⚠️ Skipping $base – already processed."
+        continue
+    fi
+
+    echo "🚀 Running Bowtie2 for $base..."
+
+    # Align to host genome
+    bowtie2 -x "$bowtie2_index" \
+        -1 "$r1" -2 "$r2" \
+        --very-sensitive \
+        --threads $threads \
+        -S "$output_dir/${base}_host.sam"
+
+    # Convert SAM to sorted BAM
+    samtools view -bS "$output_dir/${base}_host.sam" | \
+        samtools sort -o "$output_dir/${base}_host_sorted.bam"
+
+    # Index BAM file
+    samtools index "$output_dir/${base}_host_sorted.bam"
+
+    # Extract unaligned paired reads (non-host)
+    samtools fastq \
+        -1 "$output_dir/${base}_cleaned_R1.fq" \
+        -2 "$output_dir/${base}_cleaned_R2.fq" \
+        -f 12 -F 256 "$output_dir/${base}_host_sorted.bam"
+
+    echo "✅ Finished $base"
+done
+
+echo "🎉 All done."
+```
+
+Handles paired-end FASTQ, outputs: .sam/bam/bai/
+
+Gene Prediction: MetaGeneMark
+MetaGeneMark --> gmhmmp.out.faa(protein) +gmhmmp.out.fna(nucleotide)
+
+Perform cluster redundant genes with CD-HIT
+```bash
+cd-hit -i gmhmmp.out.faa -o clustered_genes.faa -c 0.95 -n 5 -T 4 -M 16000
+```
+where: 
+-c 0.95: 95% sequence identity threshold
+-n 5: appropriate for 0.9-1.0 identity
+Output: clustered_genes.faa +clustered_genes.faa.clstr
+Functional Annotation with DIAMOND or eggNOG-mapper
+
