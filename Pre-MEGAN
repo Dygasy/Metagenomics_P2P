@@ -56,11 +56,92 @@ MetaGeneMark --> gmhmmp.out.faa(protein) +gmhmmp.out.fna(nucleotide)
 
 Perform cluster redundant genes with CD-HIT
 ```bash
-cd-hit -i gmhmmp.out.faa -o clustered_genes.faa -c 0.95 -n 5 -T 4 -M 16000
+nano run_cdhit_all.sh
+```
+```bash
+#!/bin/bash
+
+# Set base directory and CD-HIT parameters
+base_dir="/mnt/e/NHCS/NHCSMS/final contigs"
+threads=8
+identity=0.95
+
+# Loop through all sample folders
+for sample_dir in "$base_dir"/*_megahit_assembly; do
+    # Find .faa file inside the sample folder
+    faa_file=$(find "$sample_dir" -maxdepth 1 -name "*.gmhmmp.out.faa")
+
+    # Skip if .faa not found
+    if [[ ! -f "$faa_file" ]]; then
+        echo "⚠️ No .faa file found in $sample_dir"
+        continue
+    fi
+
+    output_file="$sample_dir/clustered_genes.faa"
+
+    # Skip if already processed
+    if [[ -f "$output_file" ]]; then
+        echo "✅ Skipping $sample_dir – already clustered."
+        continue
+    fi
+
+    echo "🚀 Running CD-HIT on $faa_file"
+    cd-hit -i "$faa_file" -o "$output_file" -c $identity -n 5 -T $threads -M 16000
+    echo "✅ CD-HIT done for $sample_dir"
+done
+
+echo "🎉 All samples processed!"
+```
+Make executable:
+```bash
+chmod +x run_cdhit_all.sh
+```
+Run it:
+```bash
+./run_cdhit_all.sh
 ```
 where: 
 -c 0.95: 95% sequence identity threshold
 -n 5: appropriate for 0.9-1.0 identity
 Output: clustered_genes.faa +clustered_genes.faa.clstr
-Functional Annotation with DIAMOND or eggNOG-mapper
+Functional Annotation with DIAMOND (against NCBI-nr)
+```bash
+#!/bin/bash
+
+# Set your base directory and nr database path
+base_dir="/mnt/e/NHCS/NHCSMS/final contigs"
+nr_db="/path/to/nr.dmnd"
+threads=8
+
+# Loop through all clustered_genes.faa files
+find "$base_dir" -type f -name "clustered_genes.faa" | while read faa_file; do
+    sample_dir=$(dirname "$faa_file")
+    sample_name=$(basename "$sample_dir")
+    daa_file="$sample_dir/${sample_name}_diamond.daa"
+
+    # Skip if already processed
+    if [[ -f "$daa_file" ]]; then
+        echo "✅ Skipping $sample_name – DAA already exists."
+        continue
+    fi
+
+    echo "🚀 Running DIAMOND for $sample_name"
+    diamond blastp -d "$nr_db" \
+        -q "$faa_file" \
+        -o "$daa_file" \
+        --threads $threads \
+        --sensitive \
+        --evalue 0.001 \
+        --max-target-seqs 25 \
+        --outfmt 100
+
+    echo "✅ DIAMOND complete for $sample_name"
+done
+
+echo "🎉 All .daa files generated!"
+```
+
+
+output: clustered_genes.daa (Taxonomy +KEGG/eggNOG/GO profiles)
+
 
