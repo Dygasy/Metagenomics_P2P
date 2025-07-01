@@ -1,3 +1,8 @@
+Process .gz files directly in Ubuntu without unzipping them. Both readfq and bowtie2 can work with streamed input using process substitution.
+Files are named like sample_L1_1.fq.gz and sample_L1_2.fq.gz
+You're using bowtie2 for human host removal (eg., GRCh38_noalt_as index)
+You want to save SAM or BAM files after alignment. you can choose to remove readfq since it is a lightweight FASTQ parser thats typically used in custom scripts but its unnecessary. 
+
 Running Bowtie2 
 ```bash
 #!/bin/bash
@@ -15,13 +20,7 @@ for r1 in "$input_dir"/*_1.fq; do
     base=$(basename "$r1" _1.fq)
     r2="$input_dir/${base}_2.fq"
 
-    # Skip if already processed
-    if [[ -f "$output_dir/${base}_cleaned_R1.fq" && -f "$output_dir/${base}_host_sorted.bam" ]]; then
-        echo "⚠️ Skipping $base – already processed."
-        continue
-    fi
-
-    echo "🚀 Running Bowtie2 for $base..."
+    echo "Running Bowtie2 for $base..."
 
     # Align to host genome
     bowtie2 -x "$bowtie2_index" \
@@ -32,21 +31,19 @@ for r1 in "$input_dir"/*_1.fq; do
 
     # Convert SAM to sorted BAM
     samtools view -bS "$output_dir/${base}_host.sam" | \
-        samtools sort -o "$output_dir/${base}_host_sorted.bam"
+    samtools sort -o "$output_dir/${base}_host_sorted.bam"
 
     # Index BAM file
     samtools index "$output_dir/${base}_host_sorted.bam"
 
-    # Extract unaligned paired reads (non-host)
+    # Extract unaligned paired reads
     samtools fastq \
         -1 "$output_dir/${base}_cleaned_R1.fq" \
         -2 "$output_dir/${base}_cleaned_R2.fq" \
         -f 12 -F 256 "$output_dir/${base}_host_sorted.bam"
 
-    echo "✅ Finished $base"
+    echo "✔️ Finished $base"
 done
-
-echo "🎉 All done."
 ```
 
 Handles paired-end FASTQ, outputs: .sam/bam/bai/
