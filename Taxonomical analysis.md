@@ -1,4 +1,5 @@
 Export absolute and relative abundance GTDB data in different rankings out to generate OTU table in MEGAN community.
+R libraries most commonly used: ggplot2, phyloseq, vegan, microboime, complexHeatmap, 
 extract from pathcounts - 
 Look at Alpha Diversity 
 Compute within-sample diversity: consolidate them in a page using R, (vegan, phyloseq2) 
@@ -11,11 +12,13 @@ Look at CLR and rarefaction too. Tutorial on transformations: https://joey711.gi
 R-Script: 
 
 Look at Beta Diversity
-Compute between-sample distances: Bray-Curtis with PERMANOVA, visualise with:
+Compute between-sample distances: Bray-Curtis with PERMANOVA, visualise ecological patterns:
 1. PCA
 2. PCoA
 3. NMDS
-4. we did perform adonis - better to expand
+4. UPGMA tree (Hierarchical clustering- based on pairwise distances can choose Bray-curtis or UniFrac)
+5. we did perform adonis - better to expand
+5.Perform PERMANOVA - test for significant differences in community composition between groups. 
 
 R-Script:
 
@@ -28,10 +31,16 @@ R-script:
 
 Look at Taxonomic Barplots and Heatmaps
 Aggregate by Species, Genus, Order, Class, Phylum
-Visualise taxa by:
-1. Stacked barplots
-2. Heatmaps (cluster and uncluster)
-3. Bubble plots? whats this
+Taxonomic composition analysis
+1. summarise the relative abundance or presence of taxa at different taxonomic levels
+2. generate bar plots/stacked bar charts to visualise taxonomic distributions
+Heatmaps and Clustering
+1. Visualise taxa abundance across samples through heatmaps
+2. Perform hierarchical clustering or k-means clustering to identify samples with similar taxonomic profiles
+
+Correlation Analysis (is this the same as maaslin2?)
+1. Correlate specific taxa abundances with clinical metadata or other experimental variables
 
 Are we doing this for functional data generated as well?
 
+Use of PICRUSt2 or Tax4Fun (GTDB primarily provides taxonomic classification, but the taxa identified can be mapped indirectly to known genomes, facilitating subsequent functional predictions using tools mentioned)
