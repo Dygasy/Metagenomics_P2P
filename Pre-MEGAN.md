@@ -48,6 +48,37 @@ done
 
 Handles paired-end FASTQ, outputs: .sam/bam/bai/
 
+Process_bam files
+```bash
+#!/bin/bash
+
+base_dir="/mnt/e/Krona_results/NHCS/NHCSMS/raw_data"
+
+# Find all SAM files in base_dir and subfolders
+find "$base_dir" -type f -name "*_output.sam" | while read sam_file; do
+    # Get the folder path where this SAM file resides
+    folder=$(dirname "$sam_file")
+    filename=$(basename "$sam_file" .sam)
+
+    bam_file="$folder/${filename}_sorted.bam"
+    fq_file="$folder/${filename}_non_human_cleaned.fq"
+
+    echo "Processing: $sam_file"
+
+    # Convert SAM to BAM and sort
+    samtools view -bS "$sam_file" | samtools sort -o "$bam_file"
+
+    # Index BAM file
+    samtools index "$bam_file"
+
+    # Extract non-human reads
+    samtools fastq -f 12 -F 256 "$bam_file" > "$fq_file"
+done
+```
+save the script as process_bam.sh 
+execute using the code ```bash chmod +x process_bam.sh```
+Run it using the code ```bash ./process_bam.sh```
+
 Gene Prediction: MetaGeneMark
 MetaGeneMark --> gmhmmp.out.faa(protein) +gmhmmp.out.fna(nucleotide)
 
@@ -55,6 +86,8 @@ Perform cluster redundant genes with CD-HIT
 ```bash
 nano run_cdhit_all.sh
 ```
+
+
 ```bash
 #!/bin/bash
 
