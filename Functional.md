@@ -118,48 +118,54 @@ kegg_pathway_counts <- ko_pathway_df %>%
 # Save output for reference
 readr::write_tsv(kegg_pathway_counts, "kegg_pathway_counts_per_sample.tsv")
 
-# Load cleaned file with Sample, KO, Pathway
+# Columns: Gene | KO | Pathway | Sample
 ko_pathway_df <- read_tsv("ko_to_pathway_mapping.tsv")
 
-# Summarise pathway counts per sample
-kegg_pathway_counts <- ko_pathway_df %>%
+library(dplyr)
+library(tidyr)
+library(pheatmap)
+library(ggplot2)
+library(tibble)
+
+# Flatten multiple pathways per KO
+kegg_counts <- ko_pathway_df %>%
+  separate_rows(Pathway, sep = ",") %>%
   group_by(Sample, Pathway) %>%
   summarise(Count = n(), .groups = "drop") %>%
   pivot_wider(names_from = Pathway, values_from = Count, values_fill = 0)
 
-library(tibble)
-kegg_matrix <- kegg_pathway_counts %>%
+# Save for inspection
+write.table(kegg_counts, "KEGG_pathway_counts_per_sample.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+# Make sample names rownames
+kegg_matrix <- kegg_counts %>%
   column_to_rownames("Sample") %>%
   as.matrix()
 
-HEATMAP
-pheatmap::pheatmap(
-  kegg_matrix,
-  scale = "row",                     # optional: normalize per pathway
-  cluster_rows = TRUE,
-  cluster_cols = TRUE,
-  fontsize_row = 6,
-  show_rownames = FALSE,
-  main = "KEGG Pathway Abundance per Sample"
-)
+# Optional: scale values by row
+kegg_scaled <- t(scale(t(kegg_matrix)))
 
-BARPLOT
-# Collapse across samples to find top 10 pathways
-# Collapse across samples to find top 10 most abundant pathways
+# Plot heatmap
+pheatmap(kegg_scaled,
+         main = "KEGG Pathway Counts per Sample",
+         color = colorRampPalette(c("blue", "white", "red"))(100),
+         fontsize = 9)
+
+# Top 20 pathways across all samples
 top_pathways <- ko_pathway_df %>%
+  separate_rows(Pathway, sep = ",") %>%
   count(Pathway, sort = TRUE) %>%
-  slice_head(n = 10)
+  slice_head(n = 20)
 
-# Filter original to just top pathways
-filtered <- ko_pathway_df %>%
-  filter(KEGG_Pathway %in% top_pathways$KEGG_Pathway)
+# Filter out broad overview KEGG pathways (optional)
+top_pathways_filtered <- top_pathways %>%
+  filter(!Pathway %in% c("ko00000", "ko00001", "ko01000"))
 
-# Plot barplot
-library(ggplot2)
-
-ggplot(top_pathways, aes(x = reorder(Pathway, n), y = n)) +
-  geom_bar(stat = "identity", fill = "steelblue") +
+# Redraw the plot
+ggplot(top_pathways_filtered, aes(x = reorder(Pathway, n), y = n)) +
+  geom_col(fill = "steelblue") +
   coord_flip() +
-  labs(title = "Top 10 KEGG Pathways", x = "Pathway", y = "Count") +
+  labs(title = "Top KEGG Pathways (excluding overview categories)", x = "KEGG Pathway", y = "Count") +
   theme_minimal()
+
 
