@@ -217,6 +217,191 @@ for (i in seq_along(levels)) {
 }
 ```
 
+Perform Cluster Heatmap:
+Generating a heatmap of taxa abundance, where samples(rows) are clustered based on a specific variable, and taxa (columns) are the top 20 most abundant (eg; species level). Basically, reordering the rows(samples) in the heatmap based on similarity in taxa abundance, optionally using BMI as an annotation. 
+
+Hierarchical clustering groups samples with similar microbial compositions:
+in order to explore natural groupings
+
+R-script: 
+```bash
+# === Load required libraries ===
+library(tidyverse)
+library(readxl)
+library(pheatmap)
+
+# === 1. Load metadata ===
+metadata <- read_excel("E:/Krona_results/05_Taxonomy/Metadata/Clinical/Meta_Data_Stool_2024-12-06.xlsm")
+
+metadata <- metadata %>%
+  rename(SampleID = Participant_ID) %>%
+  select(SampleID, BMI) %>%
+  drop_na(BMI)
+
+# === 2. Load genus-level relative abundance ===
+abundance <- read_tsv("E:/Krona_results/05_Taxonomy/Relative abundance/Genus_relativeabundance.txt", show_col_types = FALSE)
+colnames(abundance)[1] <- "Taxon"
+
+# === 3. Identify top 20 most abundant genera ===
+top_genera <- abundance %>%
+  pivot_longer(-Taxon, names_to = "Sample", values_to = "Abundance") %>%
+  group_by(Taxon) %>%
+  summarise(total = sum(Abundance, na.rm = TRUE)) %>%
+  slice_max(total, n = 20) %>%
+  pull(Taxon)
+
+# === 4. Filter for top genera only ===
+abundance_top <- abundance %>% filter(Taxon %in% top_genera)
+
+# === 5. Reshape and merge with BMI ===
+abund_matrix <- abundance_top %>%
+  pivot_longer(-Taxon, names_to = "SampleID", values_to = "Abundance") %>%
+  pivot_wider(names_from = Taxon, values_from = Abundance, values_fill = 0)
+
+merged <- metadata %>%
+  inner_join(abund_matrix, by = "SampleID")
+
+# === 6. Prepare numeric matrix ===
+heatmap_data <- merged %>%
+  select(-SampleID, -BMI)
+
+# 🔒 Force numeric conversion, then check
+heatmap_data <- heatmap_data %>%
+  mutate(across(everything(), ~ suppressWarnings(as.numeric(.)))) %>%
+  as.data.frame()
+
+# Print to confirm all numeric
+print(sapply(heatmap_data, class))  # All must be "numeric"
+
+# Set rownames
+rownames(heatmap_data) <- merged$SampleID
+
+# === 7. Prepare BMI annotation ===
+annotation_row <- merged %>% select(BMI) %>% as.data.frame()
+rownames(annotation_row) <- merged$SampleID
+
+# === 8. Generate heatmap ===
+pheatmap(
+  mat = as.matrix(heatmap_data),
+  annotation_row = annotation_row,
+  clustering_distance_rows = "euclidean",
+  clustering_method = "complete",
+  main = "Top 20 Genus Abundance (Clustered by Microbiome Profile, Annotated by BMI)",
+  scale = "row",
+  fontsize_row = 7,
+  fontsize_col = 8
+)
+```
+
+You basically used Euclidean distance between all pairs of samples, based on their scaled (z-score standardised) genus abundances. Apply hierarchical clustering using the complete linkage method. Group similar microbiome profiles together and draw dendogram branches accordingly. 
+
+Perform Species Accumulation Curve: For human gut microbiome, you typically observe 500-2000 species depending on :
+1. sequencing depth
+2. sample prep
+3. Analysis pipeline (taxonomic classifiers & thresholds)
+4. Database used (eg; GTDB, RefSeq, MetaPhlAn, etc)
+5. For species-level resolution, ~1000 species detected across ~100 samples is realistic and consistent with published studies.
+
+Generate scaftigs (scaffold contigs) is a common step after a metagenomic assembly using tools like MEGAHIT
+Use of scaftigs for downstream analyses
+filter and analyse only longer assembled sequences
+feed into gene prediction, binning, or functional annotation tools
+
+
+```bash
+# === 1. Load required libraries ===
+library(tidyverse)
+library(vegan)
+
+# === 2. Load absolute species abundance table ===
+# Replace with your actual file path
+df <- read_tsv("E:/Krona_results/05_Taxonomy/Absolute Abundance/Species_abundance.txt")
+
+# === 3. Convert to matrix: rows = species, columns = samples ===
+df_matrix <- df %>%
+  column_to_rownames(var = colnames(df)[1]) %>%
+  as.matrix()
+
+# === 4. Transpose: now rows = samples, columns = species ===
+df_matrix <- t(df_matrix)
+
+# === 5. Compute species accumulation curve ===
+spec_acc <- specaccum(df_matrix, method = "random")
+
+# === 6. Plot the accumulation curve ===
+plot(
+  spec_acc,
+  xlab = "Number of samples",
+  ylab = "Accumulated observed species",
+  main = "Species Accumulation Curve",
+  col = "blue",
+  ci.type = "polygon",  # confidence interval shading
+  ci.col = "lightblue",
+  ci.lty = 0,
+  lwd = 2
+)
+```
+X-axis (Number of samples): As you add more samples, you're introducing more diversity and potentially detecting new species
+Y-axis (Accumulated observed species): Total number of unique species detected across all samples up to that point. 
+Blue curve: Average number of observed species per number per samples
+shaded area: Confidence interval from random permutations (species accumulation depends on sample order)
+
+
+R-script: 
+```bash
+# === Load required libraries ===
+library(readxl)
+library(tidyverse)
+library(pheatmap)
+
+# === Load metadata and abundance ===
+metadata <- read_excel("E:/Krona_results/05_Taxonomy/Metadata/Clinical/Meta_Data_Stool_2024-12-06.xlsm")
+abundance <- read_tsv("E:/Krona_results/05_Taxonomy/Relative abundance/Genus_relativeabundance.txt", show_col_types = FALSE)
+
+# === Rename first column ===
+colnames(abundance)[1] <- "Taxon"
+
+# === Select top 20 most abundant genera ===
+top_genera <- abundance %>%
+  pivot_longer(-Taxon, names_to = "Sample", values_to = "Abundance") %>%
+  group_by(Taxon) %>%
+  summarise(total = sum(Abundance, na.rm = TRUE)) %>%
+  slice_max(total, n = 20) %>%
+  pull(Taxon)
+
+abundance_top <- abundance %>%
+  filter(Taxon %in% top_genera)
+
+# === Transpose abundance to wide format ===
+abund_matrix <- abundance_top %>%
+  pivot_longer(-Taxon, names_to = "SampleID", values_to = "Abundance") %>%
+  pivot_wider(names_from = Taxon, values_from = Abundance, values_fill = 0)
+
+# === Merge with BMI metadata ===
+merged <- metadata %>%
+  rename(SampleID = `Your_SampleID_Column`) %>%  # ⛔ Replace this
+  select(SampleID, BMI) %>%
+  inner_join(abund_matrix, by = "SampleID") %>%
+  drop_na(BMI)
+
+# === Prepare matrix for heatmap ===
+rownames_mat <- merged$SampleID
+annotation_row <- merged %>% select(BMI)
+heatmap_data <- merged %>% select(-SampleID, -BMI)
+rownames(heatmap_data) <- rownames_mat
+
+# === Generate heatmap clustered by BMI ===
+pheatmap(
+  mat = as.matrix(heatmap_data),
+  annotation_row = annotation_row,
+  clustering_distance_rows = "euclidean",
+  clustering_method = "complete",
+  main = "Top 20 Genus Abundance (Clustered by BMI)",
+  scale = "row",
+  fontsize_row = 7,
+  fontsize_col = 8
+)
+```
 
 
 Correlation Analysis (is this the same as maaslin2?)
