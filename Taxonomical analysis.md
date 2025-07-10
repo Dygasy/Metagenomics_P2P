@@ -404,6 +404,7 @@ pheatmap(
 ```
 
 
+
 Correlation Analysis (is this the same as maaslin2?)
 1. Correlate specific taxa abundances with clinical metadata or other experimental variables
 
@@ -424,7 +425,53 @@ Good when you want to:
 5. aim to highlight group-level differences (Obese vs lean microbiota profiles)
 6. Suitable for summary barplots, statistical comparisons, or LEfSe-like analysis
 
+R-script to be used 
+```bash
+# Load required libraries
+library(readxl)
+library(tidyverse)
+library(Maaslin2)
 
+# --- Step 1: Load metadata ---
+metadata <- read_excel("E:/Krona_results/Metadata/Clinical/Meta_Data_Stool_2024-12-06.xlsm") %>%
+  rename(SampleID = Participant_ID) %>%
+  mutate(SampleID = as.character(SampleID)) %>%
+  column_to_rownames("SampleID")
+
+# Remove metadata columns with fewer than 2 unique values
+summary_cols <- sapply(metadata, function(x) length(unique(na.omit(x))))
+metadata_clean <- metadata[, summary_cols >= 2]
+
+# --- Step 2: Load OTU table ---
+otu_raw <- read.delim("E:/Krona_results/Metadata/gtdb/gtdb_species.txt", row.names = 1, check.names = FALSE)
+
+# Transpose OTU table: samples as rows, features as columns
+otu_transposed <- as.data.frame(t(otu_raw))
+otu_transposed <- tibble::rownames_to_column(otu_transposed, var = "SampleID")
+
+# --- Step 3: Match samples ---
+shared_ids <- intersect(otu_transposed$SampleID, rownames(metadata_clean))
+otu_final <- otu_transposed %>% filter(SampleID %in% shared_ids)
+metadata_final <- metadata_clean[shared_ids, ]
+
+# --- Step 4: Save cleaned tables for Maaslin2 ---
+write.table(otu_final, file = "otu_maaslin.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+metadata_final_out <- metadata_final %>% rownames_to_column("SampleID")
+write.table(metadata_final_out, file = "metadata_maaslin_clean.tsv", sep = "\t", quote = FALSE, row.names = FALSE)
+
+# --- Step 5: Run Maaslin2 ---
+Maaslin2(
+  input_data = "otu_maaslin.tsv",
+  input_metadata = "metadata_maaslin_clean.tsv",
+  output = "maaslin2_results",
+  normalization = "TSS",
+  transform = "LOG",
+  analysis_method = "LM",
+  max_significance = 0.05,
+  reference = c("Ethnicity,chinese", "BMIcat,Normal - Low Risk (healthy range)")
+)
+
+```
 
 
 Use of PICRUSt2 or Tax4Fun (GTDB primarily provides taxonomic classification, but the taxa identified can be mapped indirectly to known genomes, facilitating subsequent functional predictions using tools mentioned)
