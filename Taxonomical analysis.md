@@ -424,6 +424,7 @@ Good when you want to:
 5. aim to highlight group-level differences (Obese vs lean microbiota profiles)
 6. Suitable for summary barplots, statistical comparisons, or LEfSe-like analysis
 
-Are we doing this for functional data generated as well?
+
+
 
 Use of PICRUSt2 or Tax4Fun (GTDB primarily provides taxonomic classification, but the taxa identified can be mapped indirectly to known genomes, facilitating subsequent functional predictions using tools mentioned)
