@@ -168,4 +168,73 @@ ggplot(top_pathways_filtered, aes(x = reorder(Pathway, n), y = n)) +
   labs(title = "Top KEGG Pathways (excluding overview categories)", x = "KEGG Pathway", y = "Count") +
   theme_minimal()
 
+we also performed the following : This R-script has parsed out the following files:
+1. eggNOG_EC_counts_matrix.tsv
+2. eggNOG_GO_counts_matrix.tsv
+3. eggNOG_KEGG_ko_counts_matrix.tsv
+
+```bash
+library(tidyverse)
+# === 1. Set input/output ===
+annotation_dir <- "E:/Krona_results/03_Gene_Annotation/EggNOG_mapper_output"
+output_dir <- annotation_dir  # or change if you want to separate outputs
+# === 2. List annotation files ===
+annotation_files <- list.files(annotation_dir, pattern = "\\.annotations$", full.names = TRUE)
+# === 3. Fields to extract ===
+fields <- c("KEGG_ko", "GO", "EC", "CAZy", "KEGG_Module", "KEGG_Pathway", "COG_category")
+# === 4. Function to extract and count terms ===
+extract_annotation_counts <- function(file, colname) {
+  sample_id <- str_extract(basename(file), "AA_\\d+")
+  
+  df <- tryCatch({
+    read_tsv(file, comment = "#", show_col_types = FALSE)
+  }, error = function(e) return(NULL))
+  
+  if (is.null(df) || !(colname %in% colnames(df))) return(NULL)
+  
+  df_clean <- df %>%
+    select(term = all_of(colname)) %>%
+    filter(!is.na(term), term != "-", term != "") %>%
+    separate_rows(term, sep = ",|\\|") %>%   # Handles both "," and "|" delimiters
+    mutate(term = str_trim(term)) %>%
+    filter(term != "") %>%
+    count(term, name = sample_id)
+  
+  return(df_clean)
+}
+# === 5. Loop through fields ===
+for (field in fields) {
+  cat("🔍 Processing:", field, "\n")
+  
+  output_path <- file.path(output_dir, paste0("eggNOG_", field, "_counts_matrix.tsv"))
+  
+  # Skip if file already exists
+  if (file.exists(output_path)) {
+    message("⚠️ Skipping ", field, " — already processed.")
+    next
+  }
+  
+  # Extract counts
+  all_counts <- map(annotation_files, extract_annotation_counts, colname = field) %>%
+    compact()
+  
+  if (length(all_counts) == 0) {
+    cat("⚠️ No valid entries for", field, "\n")
+    next
+  }
+  
+  # Merge across samples
+  merged_counts <- reduce(all_counts, full_join, by = "term") %>%
+    replace(is.na(.), 0)
+  
+  if (nrow(merged_counts) == 0) {
+    cat("⚠️ Merged file empty for", field, "\n")
+    next
+  }
+  
+  # Save
+  write_tsv(merged_counts, file = output_path)
+  message("✅ Saved: ", output_path)
+}
+```
 
