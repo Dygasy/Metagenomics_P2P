@@ -32,76 +32,71 @@ NHCS automated alpha diversity vs metadata
 2-5 clinical or exposure factors, boxplots + p-values (Wilcoxon, Kruskal-Wallis)
 ```bash
 # ==============================================
-# 🚀 NHCS automated alpha diversity vs metadata
+#  NHCS automated alpha diversity vs metadata
 # ==============================================
 
 library(tidyverse)
 library(ggpubr)
 
-# Assuming you already have `alpha_combined` from above (joined with clinical data)
-# e.g. columns like Chao1, Shannon, Simpson, Fisher + metadata
-
-# 1. List of diversity metrics to explore
+# Assuming `alpha_combined` exists (alpha diversity + metadata joined)
 alpha_metrics <- c("Chao1", "Shannon", "Simpson", "Fisher")
 
-# 2. List of clinical variables (update as needed)
-clinical_vars <- c(
-  "BMI", "SBP", "DBP", "Gender", "Weight", "Height", "Pulse",
-  "WaistCircumference", "Hypertension", "Dyslipidemia", "Diabetes_mellitus",
-  "Smoking", "ARB", "ACE_inhibitor", "Calcium_channel_blocker", "Alcohol",
-  "Age", "VO2Max", "BSA", "IVSD", "IVSS", "LVIDD", "LVIDS", "LVPWD", "LVPWS",
-  "LVOT", "AO", "LA", "ACS", "LVEF", "LVFS", "LVmass_echo", "Left_atrial_volume",
-  "IVRT", "MV_E_peak__m_s", "MV_A_peak__m_s", "E_A_ratio", "MV_DT__ms", "TR_Vmax__m_s",
-  "RAP__mmHg", "PASP__mmHg", "PVS__cm_s", "PVD__cm_s", "PVA__cm_s", "PVADur",
-  "septalS", "Septal_E", "Septal_A", "Lateral_S", "lateralE", "lateralA",
-  "sinuscm", "sinus_tubular_junctioncm", "ave_Eprime", "E_Eprime_ratio",
-  "SMM", "BFM", "PBF", "WHR", "Fitness_score", "BMR", "Lean_LA", "Lean_RA",
-  "Lean_LL", "Lean_RL", "Lean_T", "ALM", "Gripmax", "gripabsmax", "G1L",
-  "G2L", "G1R", "G2R", "T0Fat_LAPercentage", "T0Fat_LAKg", "T0Fat_RAPercentage",
-  "T0Fat_RAKg", "T0Fat_LLPercentage", "T0Fat_LLKg", "T0Fat_RLPercentage",
-  "T0Fat_RLKg", "T0Fat_TPercentage", "T0Fat_TKg", "AV_tricuspidbicuspidnotstated",
-  "ARaorticregurgitationseverity", "MRmitralregurgitationseverity",
-  "TRTricuspidregurgitationsever", "PRPulmonaryregurgitationsever",
-  "GeneralHealth", "VascularAge"
-)
+# Use a smaller list or your selected important variables
+clinical_vars <- c("BMI", "SBP", "DBP", "Gender", "Weight", "Height",
+                   "Pulse", "WaistCircumference", "Hypertension",
+                   "Dyslipidemia", "Diabetes_mellitus", "Smoking",
+                   "ARB", "ACE_inhibitor", "Calcium_channel_blocker",
+                   "Alcohol", "Age", "VO2Max")
 
-# 3. Automated plotting function
-auto_alpha_plot <- function(metric, var) {
-  p <- NULL
-  if (var %in% colnames(alpha_combined)) {
-    if (is.numeric(alpha_combined[[var]])) {
-      # Continuous: scatter + spearman
-      p <- ggscatter(
-        alpha_combined, x = var, y = metric,
-        add = "reg.line", conf.int = TRUE,
-        cor.coef = TRUE, cor.method = "spearman",
-        title = paste(metric, "vs", var)
-      ) + theme_minimal()
-    } else {
-      # Categorical: boxplot + wilcox/kruskal
-      unique_vals <- unique(na.omit(alpha_combined[[var]]))
-      test_method <- if(length(unique_vals) == 2) "wilcox.test" else "kruskal.test"
-      p <- ggplot(alpha_combined, aes(x = .data[[var]], y = .data[[metric]], fill = .data[[var]])) +
-        geom_boxplot() + geom_jitter(width=0.2, alpha=0.5) +
-        theme_minimal() + labs(title = paste(metric, "by", var), x=var, y=metric) +
-        stat_compare_means(method = test_method, label = "p.format")
+# Helper function for each plot
+multi_alpha_plot <- function(var) {
+  plots <- list()
+  
+  for (metric in alpha_metrics) {
+    if (var %in% colnames(alpha_combined)) {
+      p <- NULL
+      
+      if (is.numeric(alpha_combined[[var]])) {
+        # Continuous
+        p <- ggscatter(
+          alpha_combined, x = var, y = metric,
+          add = "reg.line", conf.int = TRUE,
+          cor.coef = TRUE, cor.method = "spearman",
+          title = paste(metric, "vs", var)
+        ) + theme_bw()
+        
+      } else {
+        # Categorical
+        unique_vals <- unique(na.omit(alpha_combined[[var]]))
+        test_method <- if(length(unique_vals) == 2) "wilcox.test" else "kruskal.test"
+        p <- ggplot(alpha_combined, aes(x = .data[[var]], y = .data[[metric]], fill = .data[[var]])) +
+          geom_boxplot() + geom_jitter(width=0.2, alpha=0.6) +
+          stat_compare_means(method = test_method, label = "p.format") +
+          theme_bw() +
+          labs(title = paste(metric, "by", var), x=var, y=metric)
+      }
+      
+      plots[[metric]] <- p
     }
   }
-  return(p)
+  
+  return(plots)
 }
 
-# 4. Run and save plots
-dir.create("alpha_diversity_plots", showWarnings = FALSE)
+# Directory to save
+dir.create("alpha_multi_metric_plots", showWarnings = FALSE)
 
-for (metric in alpha_metrics) {
-  for (var in clinical_vars) {
-    plt <- auto_alpha_plot(metric, var)
-    if (!is.null(plt)) {
-      ggsave(filename = paste0("alpha_diversity_plots/", metric, "_vs_", var, ".png"),
-             plot = plt, width = 6, height = 5, dpi = 300)
-    }
+# Loop through all clinical vars
+for (var in clinical_vars) {
+  plots_list <- multi_alpha_plot(var)
+  # If there are plots, combine them into a 2x2 grid
+  if (length(plots_list) > 0) {
+    combined_plot <- ggarrange(plotlist = plots_list, ncol=2, nrow=2, common.legend = TRUE)
+    ggsave(filename = paste0("alpha_multi_metric_plots/alpha_vs_", var, ".png"),
+           plot = combined_plot, width = 10, height = 8, dpi = 300)
   }
 }
+
 ```
 
 Perform Beta Diversity (ordination) and PERMANOVA for overall microbiome composition differ by the main grouping factors. 
