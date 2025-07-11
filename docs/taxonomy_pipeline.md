@@ -1,3 +1,5 @@
+# Taxonomy Analysis Pipeline
+```mermaid
 flowchart LR
     T1["Input: GTDB counts"]
     T2["Tidy & filter data"]
