@@ -1,14 +1,21 @@
 # Metagenomics_V2
 
-This repository contains a comprehensive pipeline for metagenomic analyses for our collaborative study, including:
+This repository contains a comprehensive pipeline for metagenomic analyses developed for our collaborative study, encompassing both taxonomic and functional aspects:
 
 
+Features
 
-- **Taxonomic composition:** stacked barplots, heatmaps (ggplot2, pheatmap)
+Taxonomic Composition
+- **Visualisation:** stacked barplots, heatmaps (ggplot2, pheatmap)
 - **Alpha Diversity:** Chao1, Shannon, Simpson, Fisher indices (vegan)
 - **Beta Diversity:** Bray-Curtis dissimilarityy, NMDS ordinations, PERMANOVA
 - **Differential Abundance:** Maaslin2 linear models to identify taxa by metadata 
-- **Functional annotation readiness:** 
+
+Functional Profiling
+
+- **Functional Potential:** Annotates and quantifies metabolic pathways and gene families (using tools like eggNOG-mapper)
+- **Visualisation:** Pathway coverage and abundance barplots, KEGG pathway maps
+- **Comparative Functional Analysis:** PERMANOVA or differential pathway abundance testing. 
 
 
 
@@ -18,10 +25,10 @@ This repository contains a comprehensive pipeline for metagenomic analyses for o
 
 
 ```
-data/     # input datasets (GTDB outputs, metadata files)
+data/     # input datasets (GTDB outputs, eggNOG-mapper outputs,metadata files)
 docs/     # detailed markdown workflow notes, Mermaid crafted diagrams
-figures/  # generated plots (barplots, heatmaps, NMDS, etc)
-scripst/  # bash scripts, R scripts for processing, analysis and visualisation
+figures/  # generated plots (barplots, heatmaps, NMDS, functional profiles)
+scripst/  # bash, Python and R scripts for processing, analysis and visualisation
 ```
 
 
