@@ -1,0 +1,327 @@
+122271.0	Bacteria	
+5688.0	Bacteria	Actinobacteriota	
+3739.0	Bacteria	Actinobacteriota	Actinomycetia	
+3737.0	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	
+3715.0	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Bifidobacteriaceae	
+3715.0	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Bifidobacteriaceae	Bifidobacterium	
+1184.0	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium adolescentis	
+1020.0	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium bifidum	
+35.0	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium breve	
+1334.0	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Bifidobacteriaceae	Bifidobacterium	Bifidobacterium longum	
+1948.0	Bacteria	Actinobacteriota	Coriobacteriia	
+1948.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	
+306.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Atopobiaceae	
+304.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella_B	
+273.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Atopobiaceae	Olsenella_B	Olsenella_B sp000752675	
+998.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	
+996.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	
+51.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Collinsella aerofaciens_E	
+61.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Collinsella sp000434535	
+104.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Collinsella sp002232035	
+40.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Collinsella sp003439125	
+268.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Coriobacteriaceae	Collinsella	Collinsella sp003469185	
+644.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Eggerthellaceae	
+256.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Eggerthellaceae	Adlercreutzia	
+87.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Eggerthellaceae	Adlercreutzia	Adlercreutzia celatus_A	
+163.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Eggerthellaceae	Adlercreutzia	Adlercreutzia equolifaciens	
+51.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Eggerthellaceae	Gordonibacter	
+291.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Eggerthellaceae	Senegalimassilia	
+278.0	Bacteria	Actinobacteriota	Coriobacteriia	Coriobacteriales	Eggerthellaceae	Senegalimassilia	Senegalimassilia anaerobia	
+26084.0	Bacteria	Bacteroidota	
+26083.0	Bacteria	Bacteroidota	Bacteroidia	
+26076.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	
+18730.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	
+45.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	43-108	
+45.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	43-108	43-108 sp001915545	
+11719.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	
+64.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides caccae	
+418.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides cellulosilyticus	
+1665.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides clarus	
+49.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides fragilis	
+1046.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides intestinalis	
+122.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides intestinalis_A	
+2743.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides ovatus	
+195.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides sp003463205	
+537.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides thetaiotaomicron	
+2836.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides uniformis	
+1411.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Bacteroides	Bacteroides xylanisolvens	
+1729.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Paraprevotella	
+62.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Paraprevotella	Paraprevotella clara	
+1610.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Paraprevotella	Paraprevotella xylaniphila	
+5058.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Phocaeicola	
+673.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Phocaeicola	Phocaeicola dorei	
+473.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Phocaeicola	Phocaeicola massiliensis	
+821.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Phocaeicola	Phocaeicola sp900554435	
+2686.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Bacteroidaceae	Phocaeicola	Phocaeicola vulgatus	
+1025.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Barnesiellaceae	
+1025.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Barnesiellaceae	Barnesiella	
+1019.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Barnesiellaceae	Barnesiella	Barnesiella intestinihominis	
+1815.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Marinifilaceae	
+797.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Marinifilaceae	Butyricimonas	
+580.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Marinifilaceae	Butyricimonas	Butyricimonas faecihominis	
+53.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Marinifilaceae	Butyricimonas	Butyricimonas sp002161485	
+117.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Marinifilaceae	Butyricimonas	Butyricimonas virosa	
+1017.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Marinifilaceae	Odoribacter	
+1012.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Marinifilaceae	Odoribacter	Odoribacter splanchnicus	
+2043.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	
+1346.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	
+1278.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes	Alistipes onderdonkii	
+251.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes_A	
+92.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes_A	Alistipes_A ihumii	
+136.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	Alistipes_A	Alistipes_A sp900240235	
+446.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	Tidjanibacter	
+446.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Rikenellaceae	Tidjanibacter	Tidjanibacter inops	
+2352.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Tannerellaceae	
+2332.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Tannerellaceae	Parabacteroides	
+2227.0	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	Tannerellaceae	Parabacteroides	Parabacteroides distasonis	
+124.0	Bacteria	Desulfobacterota	
+124.0	Bacteria	Desulfobacterota	Desulfovibrionia	
+124.0	Bacteria	Desulfobacterota	Desulfovibrionia	Desulfovibrionales	
+124.0	Bacteria	Desulfobacterota	Desulfovibrionia	Desulfovibrionales	Desulfovibrionaceae	
+121.0	Bacteria	Desulfobacterota	Desulfovibrionia	Desulfovibrionales	Desulfovibrionaceae	Bilophila	
+121.0	Bacteria	Desulfobacterota	Desulfovibrionia	Desulfovibrionales	Desulfovibrionaceae	Bilophila	Bilophila wadsworthia	
+4316.0	Bacteria	Firmicutes	
+4316.0	Bacteria	Firmicutes	Bacilli	
+2721.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	
+1904.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelatoclostridiaceae	
+1832.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelatoclostridiaceae	Erysipelatoclostridium	
+1732.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelatoclostridiaceae	Erysipelatoclostridium	Erysipelatoclostridium sp000752095	
+64.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelatoclostridiaceae	Massiliomicrobiota	
+61.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelatoclostridiaceae	Massiliomicrobiota	Massiliomicrobiota sp002160815	
+817.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelotrichaceae	
+47.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelotrichaceae	Holdemania	
+39.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelotrichaceae	Holdemania	Holdemania massiliensis	
+749.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelotrichaceae	Longicatena	
+709.0	Bacteria	Firmicutes	Bacilli	Erysipelotrichales	Erysipelotrichaceae	Longicatena	Longicatena sp003433845	
+1556.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	
+272.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	
+252.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Ligilactobacillus	
+248.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Lactobacillaceae	Ligilactobacillus	Ligilactobacillus salivarius	
+1277.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	
+1275.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	
+741.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus salivarius	
+52.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus sp001556435	
+312.0	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	Streptococcus thermophilus	
+80320.0	Bacteria	Firmicutes_A	
+80236.0	Bacteria	Firmicutes_A	Clostridia	
+350.0	Bacteria	Firmicutes_A	Clostridia	Clostridiales	
+350.0	Bacteria	Firmicutes_A	Clostridia	Clostridiales	Clostridiaceae	
+319.0	Bacteria	Firmicutes_A	Clostridia	Clostridiales	Clostridiaceae	Clostridium	
+215.0	Bacteria	Firmicutes_A	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium paraputrificum	
+88.0	Bacteria	Firmicutes_A	Clostridia	Clostridiales	Clostridiaceae	Clostridium	Clostridium saudiense	
+53990.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	
+1246.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Anaerotignaceae	
+1244.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Anaerotignaceae	Anaerotignum	
+1229.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Anaerotignaceae	Anaerotignum	Anaerotignum sp000436415	
+52741.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	
+1447.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	AM51-8	
+1447.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	AM51-8	AM51-8 sp003478275	
+1442.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Acetatifactor	
+79.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Acetatifactor	Acetatifactor sp003447295	
+940.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Acetatifactor	Acetatifactor sp900066365	
+324.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Acetatifactor	Acetatifactor sp900066565	
+1953.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Agathobacter	
+1803.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Agathobacter	Agathobacter faecis	
+136.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Agathobacter	Agathobacter rectalis	
+2916.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Anaerobutyricum	
+1661.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Anaerobutyricum	Anaerobutyricum hallii	
+1178.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Anaerobutyricum	Anaerobutyricum hallii_A	
+1906.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Anaerostipes	
+1798.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Anaerostipes	Anaerostipes hadrus	
+1773.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Bariatricus	
+1770.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Bariatricus	Bariatricus comes	
+228.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia	
+168.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia	Blautia hansenii	
+9364.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	
+254.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A hydrogenotrophica	
+1672.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A massiliensis	
+2069.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A obeum	
+565.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A obeum_B	
+40.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp000436615	
+221.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp003471165	
+168.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp003480185	
+1188.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp900066145	
+1076.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp900066165	
+73.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp900066335	
+76.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp900066355	
+62.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A sp900120195	
+1513.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Blautia_A	Blautia_A wexlerae	
+2916.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	CAG-81	
+827.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	CAG-81	CAG-81 sp000435795	
+123.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	CAG-81	CAG-81 sp900066055	
+1539.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	CAG-81	CAG-81 sp900066535	
+296.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	CAG-81	CAG-81 sp900066785	
+1227.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Clostridium_Q	
+77.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Clostridium_Q	Clostridium_Q saccharolyticum_A	
+382.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Clostridium_Q	Clostridium_Q sp000435655	
+744.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Clostridium_Q	Clostridium_Q sp003024715	
+36.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Coprococcus	
+1195.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Coprococcus_A	
+1195.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Coprococcus_A	Coprococcus_A catus	
+5392.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Dorea	
+502.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Dorea	Dorea faecis	
+1602.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Dorea	Dorea formicigenerans	
+1076.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Dorea	Dorea longicatena	
+1273.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Dorea	Dorea longicatena_B	
+825.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Dorea	Dorea sp900066555	
+80.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eisenbergiella	
+45.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eisenbergiella	Eisenbergiella tayi	
+2390.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Enterocloster	
+71.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Enterocloster	Enterocloster citroniae	
+36.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Enterocloster	Enterocloster clostridioformis	
+1541.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Enterocloster	Enterocloster sp000431375	
+684.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Enterocloster	Enterocloster sp001517625	
+2118.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eubacterium_F	
+2112.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eubacterium_F	Eubacterium_F sp003491505	
+1265.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eubacterium_G	
+303.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eubacterium_G	Eubacterium_G sp000432355	
+886.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eubacterium_G	Eubacterium_G sp000435815	
+57.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eubacterium_G	Eubacterium_G ventriosum	
+74.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Eubacterium_I	
+2113.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Fusicatenibacter	
+2113.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Fusicatenibacter	Fusicatenibacter saccharivorans	
+80.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	GCA-900066135	
+80.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	GCA-900066135	GCA-900066135 sp900066135	
+61.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	GCA-900066575	
+49.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	GCA-900066575	GCA-900066575 sp900066385	
+58.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Hungatella	
+36.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Hungatella	Hungatella effluvii	
+2645.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Lachnospira	
+50.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Lachnospira	Lachnospira eligens	
+1418.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Lachnospira	Lachnospira eligens_B	
+707.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Lachnospira	Lachnospira rogosae	
+68.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Lachnospira	Lachnospira sp000436475	
+60.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Lachnospira	Lachnospira sp003451515	
+82.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Lachnospira	Lachnospira sp003537285	
+2736.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Mediterraneibacter	
+1370.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Mediterraneibacter	Mediterraneibacter faecis	
+1339.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Mediterraneibacter	Mediterraneibacter torques	
+4341.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Roseburia	
+123.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Roseburia	Roseburia hominis	
+2243.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Roseburia	Roseburia intestinalis	
+1559.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Roseburia	Roseburia inulinivorans	
+43.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Roseburia	Roseburia sp003470905	
+197.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Roseburia	Roseburia sp900552665	
+503.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Ruminococcus_B	
+503.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Ruminococcus_B	Ruminococcus_B gnavus	
+43.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Schaedlerella	
+59.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Sellimonas	
+44.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	Sellimonas	Sellimonas sp002161525	
+346.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	TF01-11	
+321.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	TF01-11	TF01-11 sp003529475	
+865.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	UBA9502	
+91.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	UBA9502	UBA9502 sp003478505	
+518.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	UBA9502	UBA9502 sp003480315	
+122.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	UBA9502	UBA9502 sp003481825	
+131.0	Bacteria	Firmicutes_A	Clostridia	Lachnospirales	Lachnospiraceae	UBA9502	UBA9502 sp003506385	
+288.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales	
+288.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales	Monoglobaceae	
+288.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales	Monoglobaceae	Monoglobus	
+288.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales	Monoglobaceae	Monoglobus	Monoglobus pectinilyticus	
+821.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales_A	
+821.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales_A	UBA1381	
+820.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales_A	UBA1381	CAG-41	
+820.0	Bacteria	Firmicutes_A	Clostridia	Monoglobales_A	UBA1381	CAG-41	CAG-41 sp900066215	
+22053.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	
+2415.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	
+52.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Anaeromassilibacillus	
+38.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Anaeromassilibacillus	Anaeromassilibacillus sp002159845	
+65.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Clostridium_A	
+65.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Clostridium_A	Clostridium_A leptum	
+868.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Eubacterium_R	
+819.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Eubacterium_R	Eubacterium_R sp000436835	
+40.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	GCA-900066995	
+40.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	GCA-900066995	GCA-900066995 sp900291955	
+894.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Ruminococcus_E	
+843.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Ruminococcus_E	Ruminococcus_E bromii_B	
+388.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Ruminococcus_H	
+388.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Acutalibacteraceae	Ruminococcus_H	Ruminococcus_H sp003531055	
+2560.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Butyricicoccaceae	
+2530.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Butyricicoccaceae	Agathobaculum	
+2506.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Butyricicoccaceae	Agathobaculum	Agathobaculum butyriciproducens	
+8795.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	
+870.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-103	
+870.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-103	CAG-103 sp000432375	
+796.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-110	
+789.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-110	CAG-110 sp003525905	
+941.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-83	
+277.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-83	CAG-83 sp000431575	
+173.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-83	CAG-83 sp000435975	
+428.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	CAG-83	CAG-83 sp001916855	
+1348.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Evtepia	
+1348.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Evtepia	Evtepia gabavorous	
+875.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Flavonifractor	
+298.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Flavonifractor	Flavonifractor plautii	
+492.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Flavonifractor	Flavonifractor sp000508885	
+36.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Intestinimonas	
+2222.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Lawsonibacter	
+391.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Lawsonibacter	Lawsonibacter asaccharolyticus	
+272.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Lawsonibacter	Lawsonibacter sp900066645	
+1529.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Lawsonibacter	Lawsonibacter sp900066825	
+1532.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Oscillibacter	
+1520.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Oscillospiraceae	Oscillibacter	Oscillibacter welbionis	
+8206.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	
+49.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Anaerotruncus	
+37.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Anaerotruncus	Anaerotruncus colihominis	
+3152.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	
+297.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii	
+214.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii_A	
+95.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii_C	
+1176.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii_D	
+39.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii_F	
+737.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii_G	
+40.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii_I	
+311.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium prausnitzii_J	
+41.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Faecalibacterium	Faecalibacterium sp003449675	
+708.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Gemmiger	
+624.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Gemmiger	Gemmiger formicilis	
+35.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Gemmiger	Gemmiger qucibialis	
+1160.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Negativibacillus	
+1146.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Negativibacillus	Negativibacillus massiliensis	
+48.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruminiclostridium_E	
+41.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruminiclostridium_E	Ruminiclostridium_E siraeum	
+128.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruminococcus_C	
+102.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruminococcus_C	Ruminococcus_C callidus	
+1075.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruminococcus_D	
+1071.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruminococcus_D	Ruminococcus_D bicirculans	
+1687.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruthenibacterium	
+1685.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	Ruthenibacterium	Ruthenibacterium lactatiformans	
+38.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	UBA3818	
+38.0	Bacteria	Firmicutes_A	Clostridia	Oscillospirales	Ruminococcaceae	UBA3818	UBA3818 sp002369315	
+619.0	Bacteria	Firmicutes_A	Clostridia	Peptostreptococcales	
+597.0	Bacteria	Firmicutes_A	Clostridia	Peptostreptococcales	Peptostreptococcaceae	
+570.0	Bacteria	Firmicutes_A	Clostridia	Peptostreptococcales	Peptostreptococcaceae	Intestinibacter	
+570.0	Bacteria	Firmicutes_A	Clostridia	Peptostreptococcales	Peptostreptococcaceae	Intestinibacter	Intestinibacter bartlettii	
+1866.0	Bacteria	Firmicutes_A	Clostridia	TANB77	
+1862.0	Bacteria	Firmicutes_A	Clostridia	TANB77	CAG-508	
+1828.0	Bacteria	Firmicutes_A	Clostridia	TANB77	CAG-508	CAG-269	
+755.0	Bacteria	Firmicutes_A	Clostridia	TANB77	CAG-508	CAG-269	CAG-269 sp000431335	
+1012.0	Bacteria	Firmicutes_A	Clostridia	TANB77	CAG-508	CAG-269	CAG-269 sp000437215	
+50.0	Bacteria	Firmicutes_A	Clostridia_A	
+50.0	Bacteria	Firmicutes_A	Clostridia_A	Christensenellales	
+2089.0	Bacteria	Firmicutes_C	
+2089.0	Bacteria	Firmicutes_C	Negativicutes	
+1658.0	Bacteria	Firmicutes_C	Negativicutes	Acidaminococcales	
+1658.0	Bacteria	Firmicutes_C	Negativicutes	Acidaminococcales	Acidaminococcaceae	
+1484.0	Bacteria	Firmicutes_C	Negativicutes	Acidaminococcales	Acidaminococcaceae	Acidaminococcus	
+1475.0	Bacteria	Firmicutes_C	Negativicutes	Acidaminococcales	Acidaminococcaceae	Acidaminococcus	Acidaminococcus intestini	
+174.0	Bacteria	Firmicutes_C	Negativicutes	Acidaminococcales	Acidaminococcaceae	Phascolarctobacterium	
+147.0	Bacteria	Firmicutes_C	Negativicutes	Acidaminococcales	Acidaminococcaceae	Phascolarctobacterium	Phascolarctobacterium sp000436095	
+424.0	Bacteria	Firmicutes_C	Negativicutes	Veillonellales	
+408.0	Bacteria	Firmicutes_C	Negativicutes	Veillonellales	Megasphaeraceae	
+399.0	Bacteria	Firmicutes_C	Negativicutes	Veillonellales	Megasphaeraceae	Megasphaera	
+70.0	Bacteria	Firmicutes_C	Negativicutes	Veillonellales	Megasphaeraceae	Megasphaera	Megasphaera elsdenii	
+328.0	Bacteria	Firmicutes_C	Negativicutes	Veillonellales	Megasphaeraceae	Megasphaera	Megasphaera sp000417505	
+3330.0	Bacteria	Proteobacteria	
+3326.0	Bacteria	Proteobacteria	Gammaproteobacteria	
+3267.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	
+3263.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	
+476.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	Duodenibacillus	
+464.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	Duodenibacillus	Duodenibacillus sp003472385	
+1489.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	Mesosutterella	
+477.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	Mesosutterella	Mesosutterella massiliensis	
+1004.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	Mesosutterella	Mesosutterella multiformis	
+1284.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	Sutterella	
+1262.0	Bacteria	Proteobacteria	Gammaproteobacteria	Burkholderiales	Burkholderiaceae	Sutterella	Sutterella wadsworthensis	
+53.0	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	
+47.0	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae	
